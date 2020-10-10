@@ -1,4 +1,4 @@
-module github.com/oinume/create-minestone-action
+module github.com/ymgw55/create-minestone-action
 
 go 1.14
 

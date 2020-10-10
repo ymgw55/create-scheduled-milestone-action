@@ -7,10 +7,11 @@ jobs:
       - uses: actions/checkout@master
       - name: Create milestone
         id: create_milestone
-        uses: oinume/create-scheduled-milestone-action@master
+        uses: ymgw55/create-scheduled-milestone-action@master
         with:
           title: "v${{ github.run_id }}"
           state: "open"
+          description: "v${{ github.run_id }} release"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Check outputs

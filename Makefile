@@ -1,5 +1,5 @@
 APP = create-scheduled-milestone
-BASE_DIR = github.com/oinume/create-scheduled-milestone
+BASE_DIR = github.com/ymgw55/create-scheduled-milestone
 VENDOR_DIR = vendor
 GO_GET ?= go get
 GO_TEST ?= go test -v -race

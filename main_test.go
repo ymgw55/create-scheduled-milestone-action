@@ -29,7 +29,7 @@ func Test_app_run(t *testing.T) {
 	}{
 		"ok": {
 			envs: map[string]string{
-				"GITHUB_REPOSITORY": "oinume/create-scheduled-milestone-action",
+				"GITHUB_REPOSITORY": "ymgw55/create-scheduled-milestone-action",
 				"INPUT_TITLE":       "v1.0.0",
 				"INPUT_STATE":       "open",
 				"INPUT_DESCRIPTION": "v1.0.0 release",
@@ -63,7 +63,7 @@ func Test_app_run(t *testing.T) {
 		},
 		"error_empty_title": {
 			envs: map[string]string{
-				"GITHUB_REPOSITORY": "oinume/create-scheduled-milestone-action",
+				"GITHUB_REPOSITORY": "ymgw55/create-scheduled-milestone-action",
 				"INPUT_TITLE":       "",
 				"INPUT_STATE":       "open",
 				"INPUT_DESCRIPTION": "v1.0.0 release",
@@ -118,14 +118,14 @@ func Test_newMilestone(t *testing.T) {
 	}{
 		"ok": {
 			args: args{
-				githubRepository: "oinume/create-milestone-action",
+				githubRepository: "ymgw55/create-milestone-action",
 				title:            "v1.0.0",
 				state:            "open",
 				description:      "v1.0.0 release",
 				dueOn:            "2012-10-09T23:39:01Z",
 			},
 			want: &milestone{
-				owner:       "oinume",
+				owner:       "ymgw55",
 				repo:        "create-milestone-action",
 				title:       "v1.0.0",
 				state:       "open",
@@ -136,7 +136,7 @@ func Test_newMilestone(t *testing.T) {
 		},
 		"invalid repository format": {
 			args: args{
-				githubRepository: "oinume$create-milestone-action",
+				githubRepository: "ymgw55$create-milestone-action",
 				title:            "",
 				state:            "",
 				description:      "",
@@ -148,7 +148,7 @@ func Test_newMilestone(t *testing.T) {
 		},
 		"empty title error": {
 			args: args{
-				githubRepository: "oinume/create-milestone-action",
+				githubRepository: "ymgw55/create-milestone-action",
 				title:            "",
 				state:            "",
 				description:      "",
